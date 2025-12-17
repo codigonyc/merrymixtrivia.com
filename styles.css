@@ -309,10 +309,16 @@ body {
     margin-bottom: 30px;
 }
 
+.score-subheading {
+    font-size: 22px;
+    font-weight: 700;
+    color: #145f4a;
+}
+
 .score-illustration {
     max-width: 100%;
     height: auto;
-    margin: 30px auto;
+    margin: 30px auto 10px;
     display: block;
 }
 
@@ -321,7 +327,7 @@ body {
     font-size: 16px;
     line-height: 24px;
     color: #145f4a;
-    margin-top: 20px;
+    margin-bottom: 5px;
 }
 
 .score-message .score-message-bold {

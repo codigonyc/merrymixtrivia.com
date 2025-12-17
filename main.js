@@ -310,6 +310,17 @@ function handleAnswerClick(questionIndex, answerIndex) {
     // Show feedback
     showFeedback(questionIndex, isCorrect);
     
+    // Track answer click in Google Analytics
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'answer_clicked', {
+            'event_category': 'Quiz',
+            'event_label': `Question ${questionIndex + 1}`,
+            'question_number': questionIndex + 1,
+            'is_correct': isCorrect,
+            'answer_index': answerIndex
+        });
+    }
+    
     // Check if all questions are answered
     checkAllAnswered();
 }
@@ -362,37 +373,44 @@ function showFinalScore() {
     
     const scoreSection = document.getElementById('scoreSection');
     const scoreHeading = document.getElementById('scoreHeading');
+    const scoreSubheading = document.getElementById('scoreSubheading');
     const scoreMessage = document.getElementById('scoreMessage');
     const scoreIllustration = document.getElementById('scoreIllustration');
     
     // Determine message, illustration, and heading based on score
     let heading = '';
+    let subheading = '';
     let message = '';
     let illustration = '';
     
     if (correctCount === 11) {
         // Perfect score (11 correct)
         heading = 'YOU GOT 11 CORRECT!';
-        message = 'Way to sleigh! You are Mariah Carey\'s spirit animal. Go forth!';
+        subheading = 'Way to sleigh!';
+        message = 'You are Mariah Carey\'s spirit animal. Go forth!';
         illustration = 'assets/score-11-sleigh.svg';
     } else if (correctCount >= 8) {
         // Great score (8-10 correct)
         heading = `YOU GOT ${correctCount} CORRECT!`;
-        message = 'Way to light it up. Keep playing those tunes and stay bright.';
+        subheading = 'Way to light it up.';
+        message = 'Keep playing those tunes and stay bright.';
         illustration = 'assets/score-8-10-candles.svg';
     } else if (correctCount >= 5) {
         // Good score (5-7 correct)
         heading = `YOU GOT ${correctCount} CORRECT!`;
-        message = 'You\'re getting warmer. There\'s still time to reach the top of the holiday pops. Now turn up those tunes and get rockin!';
+        subheading = 'You\'re getting warmer.';
+        message = 'There\'s still time to reach the top of the holiday pops. Now turn up those tunes and get rockin!';
         illustration = 'assets/score-5-7-fireplace.svg';
     } else {
         // Lower score (0-4 correct)
         heading = `YOU GOT ${correctCount} CORRECT!`;
-        message = 'Holidays aren\'t your jam? We get it. Have an extra hot toddy on us.';
+        subheading = 'Holidays aren\'t your jam?';
+        message = 'We get it. Have an extra hot toddy on us.';
         illustration = 'assets/score-0-4-teacup.svg';
     }
     
     scoreHeading.textContent = heading;
+    scoreSubheading.textContent = subheading;
     scoreMessage.textContent = message;
     
     // Set and show illustration
@@ -403,6 +421,17 @@ function showFinalScore() {
     
     // Show score section
     scoreSection.style.display = 'block';
+    
+    // Track quiz completion in Google Analytics
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'quiz_completed', {
+            'event_category': 'Quiz',
+            'event_label': 'All Questions Answered',
+            'total_questions': quizData.length,
+            'correct_answers': correctCount,
+            'score_percentage': Math.round((correctCount / quizData.length) * 100)
+        });
+    }
     
     // Scroll to score section
     scoreSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
