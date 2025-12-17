@@ -1,7 +1,7 @@
 // Quiz Data - Placeholder content
 const quizData = [
     {
-        question: "According to a popular internet theory, what are the people in Paul McCartney's \"Wonderful Christmas,\" doing?",
+        question: "According to a popular internet theory, what are the people in Paul McCartney's \"Wonderful Christmastime,\" doing?",
         answers: [
             "Baking cookies",
             "Drinking at the pub",
@@ -11,23 +11,23 @@ const quizData = [
         correctAnswer: 2, // Index of correct answer (0-based)
         icon: 'sq_icon_q1_witchcraft.svg', // Icon image file name for this question's feedback
         feedback: {
-            correct: "Practicing witchcraft. The fan theory suggests that the song is about a group of friends performing a pagan ritual in the back room of a party. The opening lines, \"The mood is right, the spirit's up, we're here tonight, and that's enough,\" evoke setting up a spell. When they're interrupted by an outside reveler, they insist they're, \"simply having a wonderful Christmas time.\"",
-            incorrect: "The correct answer is \"Practicing witchcraft.\" The fan theory suggests that the song is about a group of friends performing a pagan ritual in the back room of a party."
+            correct: "Practicing witchcraft. The fan theory suggests that the song is about a group of friends performing a pagan ritual in the back room of a party. The opening lines, \"The mood is right, the spirit's up, we're here tonight, and that's enough,\" evoke setting up a spell. When they're interrupted by an outside reveler, they insist they're \"simply having a wonderful Christmastime.\"",
+            incorrect: "Practicing witchcraft. The fan theory suggests that the song is about a group of friends performing a pagan ritual in the back room of a party. The opening lines, \"The mood is right, the spirit's up, we're here tonight, and that's enough,\" evoke setting up a spell. When they're interrupted by an outside reveler, they insist they're \"simply having a wonderful Christmastime.\""
         }
     },
     {
-        question: "In Adam Sandler's original \"The Hanukkah Song,\" what celebrity is NOT referenced?",
+        question: "In Adam Sandler's original version of \"The Chanukah Song,\" what celebrity is NOT referenced?",
         answers: [
             "James Caan",
             "Arthur Fonzarelli",
             "Lenny Bruce",
             "Ann Landers"
         ],
-        correctAnswer: 3,
+        correctAnswer: 2,
         icon: 'sq_icon_q2_menorah.svg', // Icon image file name for this question's feedback
         feedback: {
-            correct: "Ann Landers. Sandler has said that he created \"The Hanukkah Song\" for Saturday Night Live in 1994 because there were plenty of Christmas songs but almost no mainstream Hanukkah songs.",
-            incorrect: "The correct answer is \"Ann Landers.\" Sandler has said that he created \"The Hanukkah Song\" for Saturday Night Live in 1994 because there were plenty of Christmas songs but almost no mainstream Hanukkah songs; He wanted something silly and joyful that Jewish kids could relate to."
+            correct: "Lenny Bruce. Sandler has said that he created \"The Chanukah Song\" for *Saturday Night Live* in 1994 because there were plenty of Christmas songs but almost no mainstream Chanukah songs; He wanted something silly and joyful that Jewish kids could relate to. Over the years, Sandler has updated the lyrics with new pop culture references to stay relevant.",
+            incorrect: "Lenny Bruce. Sandler has said that he created \"The Chanukah Song\" for *Saturday Night Live* in 1994 because there were plenty of Christmas songs but almost no mainstream Chanukah songs; He wanted something silly and joyful that Jewish kids could relate to. Over the years, Sandler has updated the lyrics with new pop culture references to stay relevant."
         }
     },
     {
@@ -46,7 +46,7 @@ const quizData = [
         }
     },
     {
-        question: "What New Year's song captures the morning-after fog of a wild New Year's Eve party?",
+        question: "What song captures the morning-after fog of a wild New Year's Eve party?",
         answers: [
             { text: "Same Old Lang Syne", subtitle: "by Dan Fogelberg" },
             { text: "Funky New Year", subtitle: "by The Eagles" },
@@ -71,8 +71,8 @@ const quizData = [
         correctAnswer: 0, // Index of correct answer (0-based) - "3"
         icon: 'sq_icon_q5_three.svg', // Icon image file name for this question's feedback
         feedback: {
-            correct: "It's three. Despite hailing as one of the most famous Christmas movies of all time, *Love Actually* features only a handful of explicitly Christmas-themed songs: 'Christmas is All Around,' the spoof single sung by Bill Nighy; the indomitable, 'All I Want for Christmas is You,' by Mariah Carey; and Otis Redding's version of 'White Christmas.'",
-            incorrect: "It's three. Despite hailing as one of the most famous Christmas movies of all time, *Love Actually* features only a handful of explicitly Christmas-themed songs: 'Christmas is All Around,' the spoof single sung by Bill Nighy; the indomitable, 'All I Want for Christmas is You,' by Mariah Carey; and Otis Redding's version of 'White Christmas.'"
+            correct: "It's three. Despite hailing as one of the most famous Christmas movies of all time, *Love Actually* features only a handful of explicitly Christmas-themed songs: \"Christmas is All Around,\" the spoof single sung by Bill Nighy; the indomitable, \"All I Want for Christmas is You,\" by Mariah Carey; and Otis Redding's version of \"White Christmas.\"",
+            incorrect: "It's three. Despite hailing as one of the most famous Christmas movies of all time, *Love Actually* features only a handful of explicitly Christmas-themed songs: \"Christmas is All Around,\" the spoof single sung by Bill Nighy; the indomitable, \"All I Want for Christmas is You,\" by Mariah Carey; and Otis Redding's version of \"White Christmas.\""
         }
     },
     {
@@ -121,7 +121,7 @@ const quizData = [
         }
     },
     {
-        question: "\"Ma'oz Tzur\" has been sung to many melodies over the centuries, including modern interpretations by Sufjan Stevens, Barenaked Ladies, and The Maccabeats. What is the English translation of the Hebrew expression?",
+        question: "\"Ma'oz Tzur\" has been sung to many melodies over the centuries, including modern interpretations by Sufjan Stevens and The Maccabeats. What is the English translation of the Hebrew expression?",
         answers: [
             "Rock of refuge",
             "Peace be upon you",
@@ -131,8 +131,8 @@ const quizData = [
         correctAnswer: 0, // Index of correct answer (0-based) - "Rock of refuge"
         icon: 'sq_icon_q9_rock.svg', // Icon image file name for this question's feedback
         feedback: {
-            correct: "Rock of refuge. \"Ma'oz Tzur\" is the opening phrase of a traditional Hanukkah hymn that praises God as a metaphorical stronghold who rescued the Jewish people through various historical struggles. The song is often sung after lighting the menorah.",
-            incorrect: "Rock of refuge. \"Ma'oz Tzur\" is the opening phrase of a traditional Hanukkah hymn that praises God as a metaphorical stronghold who rescued the Jewish people through various historical struggles. The song is often sung after lighting the menorah."
+            correct: "Rock of refuge. \"Ma'oz Tzur\" is the opening phrase of a traditional Chanukah hymn that praises God as a metaphorical stronghold who rescued the Jewish people through various historical struggles. The song is often sung after lighting the menorah.",
+            incorrect: "Rock of refuge. \"Ma'oz Tzur\" is the opening phrase of a traditional Chanukah hymn that praises God as a metaphorical stronghold who rescued the Jewish people through various historical struggles. The song is often sung after lighting the menorah."
         }
     },
     {
@@ -394,7 +394,7 @@ function showFinalScore() {
         // Perfect score (11 correct)
         heading = 'YOU GOT 11 CORRECT!';
         subheading = 'Way to sleigh!';
-        message = 'You are Mariah Carey\'s spirit animal. Go forth!';
+        message = 'You are Mariah Carey\'s spirit animal. Go forth and spread cheer!';
         illustration = 'assets/score-11-sleigh.svg';
     } else if (correctCount >= 8) {
         // Great score (8-10 correct)

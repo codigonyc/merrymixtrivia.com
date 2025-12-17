@@ -61,6 +61,7 @@ body {
     color: #fd2043;
     text-transform: uppercase;
     margin-bottom: 16px;
+    line-height: normal;
 }
 
 .intro-content {
@@ -403,6 +404,13 @@ body {
     color: #145f4a;
     text-decoration: underline;
     margin-bottom: 24px;
+    display: block;
+}
+
+.ps-text:visited,
+.ps-text:hover,
+.ps-text:active {
+    color: #145f4a;
 }
 
 .spotify-playlist-link {
@@ -517,6 +525,13 @@ body {
     
     .question-text {
         font-size: 20px;
+    }
+}
+
+/* Desktop adjustments */
+@media (min-width: 601px) {
+    .score-content {
+        margin: 0;
     }
 }
 
