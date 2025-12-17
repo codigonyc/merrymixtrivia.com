@@ -187,7 +187,7 @@ function initQuiz() {
         
         const questionText = document.createElement('div');
         questionText.className = 'question-text';
-        questionText.textContent = questionData.question;
+        questionText.innerHTML = formatFeedbackText(questionData.question);
         
         // Answers container
         const answersContainer = document.createElement('div');
@@ -325,6 +325,12 @@ function handleAnswerClick(questionIndex, answerIndex) {
     checkAllAnswered();
 }
 
+// Helper function to convert markdown-style italics (*text*) to HTML italics
+function formatFeedbackText(text) {
+    // Replace *text* with <em>text</em>
+    return text.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+}
+
 // Show feedback for a question
 function showFeedback(questionIndex, isCorrect) {
     const feedbackSection = document.getElementById(`feedback-${questionIndex}`);
@@ -345,8 +351,9 @@ function showFeedback(questionIndex, isCorrect) {
     feedbackTitle.textContent = isCorrect ? 'Correct.' : 'Incorrect.';
     feedbackTitle.className = `feedback-title ${isCorrect ? 'correct' : 'incorrect'}`;
     
-    // Set feedback text
-    feedbackText.textContent = isCorrect ? questionData.feedback.correct : questionData.feedback.incorrect;
+    // Set feedback text with HTML formatting for italics
+    const feedbackContent = isCorrect ? questionData.feedback.correct : questionData.feedback.incorrect;
+    feedbackText.innerHTML = formatFeedbackText(feedbackContent);
     
     // Show feedback section
     feedbackSection.classList.add('show');
