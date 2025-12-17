@@ -1,2 +1,2 @@
-# jingle-jangle-trivia
-Jingle Jangle Trivia
+# merrymixtrivia.com
+Merry Mix Trivia
