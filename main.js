@@ -170,6 +170,29 @@ const quizData = [
 // User answers tracking
 const userAnswers = new Array(quizData.length).fill(null);
 
+// Preload feedback icons (and a couple of UI icons) to reduce first-reveal lag
+const _preloadedImages = [];
+function preloadImages(urls) {
+    urls.forEach(url => {
+        const img = new Image();
+        img.src = url;
+        _preloadedImages.push(img);
+    });
+}
+
+function preloadQuizAssets() {
+    const iconUrls = new Set();
+    quizData.forEach(q => {
+        if (q.icon) iconUrls.add(`assets/${q.icon}`);
+    });
+
+    // These are used by answer buttons and may also benefit from preloading
+    iconUrls.add('assets/icon-checkmark.svg');
+    iconUrls.add('assets/icon-x.svg');
+
+    preloadImages([...iconUrls]);
+}
+
 // Initialize quiz
 function initQuiz() {
     const quizContainer = document.getElementById('quizContainer');
@@ -510,5 +533,7 @@ window.testQuiz = testQuiz;
 window.resetQuiz = resetQuiz;
 
 // Initialize quiz when page loads
+// Start preloading as early as possible (main.js is loaded at the end of <body>)
+preloadQuizAssets();
 document.addEventListener('DOMContentLoaded', initQuiz);
 
