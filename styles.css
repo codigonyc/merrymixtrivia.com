@@ -210,7 +210,6 @@ body {
 .feedback-section {
     display: none;
     margin-top: 24px;
-    /* padding-left: 60px; */
     position: relative;
 }
 
@@ -218,24 +217,25 @@ body {
     display: block;
 }
 
+.feedback-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0;
+}
+
 .feedback-icon {
-    /* position: absolute;
-    left: 0;
-    top: 0;
-    width: 60px;
-    height: 60px; */
     display: block;
+    flex-shrink: 0;
 }
 
 .icon-frame {
     width: 60px;
     height: 60px;
-    /* border: 3px solid #f3b610; */
-    /* border-left-width: 9px; */
-    /* background-color: #f3b610; */
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: flex-start;
     position: relative;
 }
 
@@ -260,16 +260,11 @@ body {
     background-image: var(--custom-icon, url('assets/icon-menorah.svg'));
 }
 
-.feedback-content {
-    /* padding-left: 20px; */
-    display: block;
-}
-
 .feedback-title {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 800;
-    /* margin-bottom: 36px; */
+    margin-left: 12px;
 }
 
 .feedback-title.correct {
@@ -285,6 +280,7 @@ body {
     font-size: 16px;
     line-height: 20px;
     color: #145f4a;
+    margin-top: 12px;
 }
 
 .feedback-text em {
@@ -293,8 +289,8 @@ body {
 
 /* Score Section */
 .score-section {
-    margin: 60px 0;
-    padding: 40px 0;
+    margin: 0;
+    padding: 0;
 }
 
 .score-content {
@@ -334,21 +330,107 @@ body {
     margin-bottom: 8px;
 }
 
+/* Closing Message Section */
+.closing-message {
+    margin: 0;
+    padding: 0;
+}
+
+.closing-heading {
+    font-family: 'Hepta Slab', serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: #fd2043;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    line-height: normal;
+}
+
+.closing-subheading {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #145f4a;
+    margin-bottom: 22px;
+}
+
+.closing-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #145f4a;
+    margin: 0;
+}
+
+.closing-text a {
+    color: #145f4a;
+    text-decoration: underline;
+}
+
+/* P.S. Spotify Playlist Section */
+.ps-section {
+    margin: 30px 0;
+    padding: 0;
+}
+
+.ps-container {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 0 auto;
+    /* max-width: 332px; */
+    min-height: 160px;
+}
+
+.ps-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #145f4a;
+    text-decoration: underline;
+    margin-bottom: 24px;
+}
+
+.spotify-playlist-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.spotify-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+}
+
+.spotify-playlist-name {
+    font-family: 'Hepta Slab', serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fd2043;
+    text-decoration: underline;
+}
+
 /* Footer */
 .footer {
-    margin: 60px 0 40px;
+    margin: 0 0 40px;
 }
 
 .footer-icon-wrapper {
-    position: relative;
-    padding-left: 60px;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .footer-icon {
-    position: absolute;
+    /* position: absolute;
     left: 0;
-    top: 0;
+    top: 0; */
     width: 60px;
     height: 60px;
 }
@@ -392,15 +474,14 @@ body {
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 4px;
+    justify-content: left;
+    gap: 8px;
 }
 
-.footer-branding-text-bold {
-    font-size: 14px;
-    font-weight: 700;
-    color: #333;
-    font-family: 'Roboto', sans-serif;
+.footer-branding-logo {
+    height: 24px;
+    width: auto;
+    display: block;
 }
 
 .footer-branding-dot {
@@ -409,13 +490,7 @@ body {
     background-color: #fd2043;
     border-radius: 50%;
     display: inline-block;
-}
-
-.footer-branding-text-regular {
-    font-size: 14px;
-    font-weight: 400;
-    color: #333;
-    font-family: 'Roboto', sans-serif;
+    flex-shrink: 0;
 }
 
 /* Responsive adjustments */

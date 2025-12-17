@@ -231,6 +231,10 @@ function initQuiz() {
         feedbackSection.className = 'feedback-section';
         feedbackSection.id = `feedback-${questionIndex}`;
         
+        // Feedback header (icon + title in flex row)
+        const feedbackHeader = document.createElement('div');
+        feedbackHeader.className = 'feedback-header';
+        
         const feedbackIcon = document.createElement('div');
         feedbackIcon.className = 'feedback-icon';
         const iconFrame = document.createElement('div');
@@ -238,21 +242,20 @@ function initQuiz() {
         iconFrame.id = `icon-frame-${questionIndex}`;
         feedbackIcon.appendChild(iconFrame);
         
-        const feedbackContent = document.createElement('div');
-        feedbackContent.className = 'feedback-content';
-        
         const feedbackTitle = document.createElement('div');
         feedbackTitle.className = 'feedback-title';
         feedbackTitle.id = `feedback-title-${questionIndex}`;
         
+        feedbackHeader.appendChild(feedbackIcon);
+        feedbackHeader.appendChild(feedbackTitle);
+        
+        // Feedback text (separate div below)
         const feedbackText = document.createElement('div');
         feedbackText.className = 'feedback-text';
         feedbackText.id = `feedback-text-${questionIndex}`;
         
-        feedbackContent.appendChild(feedbackTitle);
-        feedbackContent.appendChild(feedbackText);
-        feedbackSection.appendChild(feedbackIcon);
-        feedbackSection.appendChild(feedbackContent);
+        feedbackSection.appendChild(feedbackHeader);
+        feedbackSection.appendChild(feedbackText);
         
         // Assemble question section
         questionSection.appendChild(questionNumber);
