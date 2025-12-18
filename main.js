@@ -123,16 +123,16 @@ const quizData = [
     {
         question: "\"Ma'oz Tzur\" has been sung to many melodies over the centuries, including modern interpretations by Sufjan Stevens and The Maccabeats. What is the English translation of the Hebrew expression?",
         answers: [
-            "Rock of refuge",
+            "Rock of ages",
             "Peace be upon you",
             "Happy holidays",
             "Complete recovery"
         ],
-        correctAnswer: 0, // Index of correct answer (0-based) - "Rock of refuge"
+        correctAnswer: 0, // Index of correct answer (0-based) - "Rock of ages"
         icon: 'sq_icon_q9_rock.svg', // Icon image file name for this question's feedback
         feedback: {
-            correct: "Rock of refuge. \"Ma'oz Tzur\" is the opening phrase of a traditional Chanukah hymn that praises God as a metaphorical stronghold who rescued the Jewish people through various historical struggles. The song is often sung after lighting the menorah.",
-            incorrect: "Rock of refuge. \"Ma'oz Tzur\" is the opening phrase of a traditional Chanukah hymn that praises God as a metaphorical stronghold who rescued the Jewish people through various historical struggles. The song is often sung after lighting the menorah."
+            correct: "Rock of ages. \"Ma'oz Tzur\" is the opening phrase of a traditional Chanukah hymn that praises God as a metaphorical stronghold who rescued the Jewish people through various historical struggles. The song is often sung after lighting the menorah.",
+            incorrect: "Rock of ages. \"Ma'oz Tzur\" is the opening phrase of a traditional Chanukah hymn that praises God as a metaphorical stronghold who rescued the Jewish people through various historical struggles. The song is often sung after lighting the menorah."
         }
     },
     {
